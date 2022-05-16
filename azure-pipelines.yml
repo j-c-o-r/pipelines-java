@@ -3,17 +3,17 @@ stages:
 - stage: Build
 	jobs:
 	- job: Build
-	pool:
-		name: Hosted Ubuntu 1604
-	steps:
-    - task: CmdLine@2
-      displayName: DISPLAY NAME
-      continueOnError: true
-      inputs:
-        script: 'COMMAND StarterAPIs.json'
-        workingDirectory: 'starter-code/automatedtesting/postman'
-    - task: CmdLine@2
-      displayName: DISPLAY NAME
-      inputs:
-        script: 'COMMAND'
-        workingDirectory: DEFAULT WORKING DIRECTORY
+		pool:
+			name: Hosted Ubuntu 1604
+		steps:
+		- task: CmdLine@2
+			displayName: DISPLAY NAME
+			continueOnError: true
+			inputs:
+				script: 'COMMAND StarterAPIs.json'
+				workingDirectory: 'starter-code/automatedtesting/postman'
+		- task: CmdLine@2
+			displayName: DISPLAY NAME
+			inputs:
+				script: 'COMMAND'
+				workingDirectory: DEFAULT WORKING DIRECTORY
