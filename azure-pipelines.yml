@@ -16,4 +16,4 @@ stages:
       displayName: Run Newman Tests
       inputs:
         script: 'newman run StarterAPIs.json'
-        workingDirectory: $(System.DefaultWorkingDirectory)
+        workingDirectory: 'starter-code/automatedtesting/postman
