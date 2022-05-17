@@ -7,13 +7,13 @@ stages:
       vmImage: 'ubuntu-latest'
     steps:
     - task: CmdLine@2
-      displayName: DISPLAY NAME
+      displayName: Install Newman Runner
       continueOnError: true
       inputs:
-        script: 'COMMAND StarterAPIs.json'
+        script: 'sudo npm install -g newman'
         workingDirectory: 'starter-code/automatedtesting/postman'
     - task: CmdLine@2
-      displayName: DISPLAY NAME
+      displayName: Run Newman Tests
       inputs:
-        script: 'COMMAND'
-        workingDirectory: DEFAULT WORKING DIRECTORY
+        script: 'newman run StarterAPIs.json'
+        workingDirectory: $(System.DefaultWorkingDirectory)
